@@ -20,11 +20,17 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/details.css">
 </head>
 
 <body>
+    <section id="pokeDetails" class="details">
+        <div class="details-content" id="detailsContent">
+            <!-- ..... Stats page here ..... -->
+        </div>
+    </section> 
     <section class="content">
-        <h1>Pokedex</h1>
+        <img src="https://raw.githubusercontent.com/sleduardo20/pokedex/main/public/img/logo.svg" alt="Pokedex">
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
@@ -39,6 +45,7 @@
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/stats-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>

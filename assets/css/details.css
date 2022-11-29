@@ -1,0 +1,126 @@
+.details {
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    z-index: 200;
+    width: 100vw;
+    height: 110vh;
+    padding: 50px 0;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .details-content {
+    border: 1px solid #888;
+    border-radius: 30px;
+    width: 300px;
+    height: 550px;
+    box-shadow: 15px 15px 15px rgb(50, 50, 50);
+    position: relative;
+    text-align: center;
+    z-index: 0;
+  }
+  .details-content::before {
+    content: "";
+    display:block;
+    width: inherit; height: inherit;
+    background: url(../images/pokeball.svg) no-repeat 150px 105px;
+    background-size: 175px;
+    filter: invert(100%) opacity(30%);
+  }
+  .details-header {
+    position: absolute;
+    color: white;
+    width: 300px;
+    height: 250px;
+    top: 0;
+  }
+  .details-img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .details-name {
+    text-transform: capitalize;
+    font-size: 2em;
+    display: inline;
+    float: left;
+    padding-left: 25px;
+    padding-top: 40px;
+    z-index: 1;
+  }
+  .details-number {
+    text-transform: capitalize;
+    display: inline;
+    float: right;
+    padding-top: 25px;
+    padding-right: 40px;
+    z-index: 1;
+  }
+  .details-img {
+    padding: 130px 0;
+  }
+  .details-img > img {
+    height: 140px;
+    max-width: 280px;
+  }
+  .details-types {
+    display: block;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-left: 25px;
+  }
+  .details-header .details-types .types-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.details-header .details-types .types-list .type {
+  display: inline-block;
+  color: #fff;
+  padding: .25rem .5rem;
+  margin: .25rem .1rem;
+  font-size: .8rem;
+  border-radius: 1rem;
+  filter: brightness(1.1);
+  text-align: center;
+}
+.details-body {
+  padding-top: 35px;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: -1px;
+  background-color: white;
+  color: gray;
+  border-radius: 30px;
+  z-index: -1;
+}
+.stats-inline {
+  display: inline;
+  margin: 0 1rem;
+}
+.stats-text {
+  padding: 6px;
+}
+.stats-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(208,208,208,1) 50%, rgba(255,255,255,1) 80%);
+}
+.stats-footer {
+  padding-top: 15px;
+  border-top: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(208,208,208,1) 50%, rgba(255,255,255,1) 80%);
+}

@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    max-width: 100vw;
 }
 
 .normal {
@@ -84,6 +85,8 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
+    min-width: 180px;
 }
 
 .pokemon .number {
@@ -123,7 +126,7 @@
 }
 
 .pokemon .detail img {
-    max-width: 100%;
+    max-width: 100px;
     height: 70px;
 }
 
@@ -146,19 +149,30 @@
     border-radius: 1rem;
 }
 
-@media screen and (min-width: 380px) {
+.pokebutton {
+    border: none;
+    background-color: white;
+}
+
+.content > img {
+    display: block;
+    width: 250px;
+    margin: auto;
+}
+
+@media screen and (min-width: 430px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 625px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 840px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }

@@ -17,6 +17,21 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     return pokemon
 }
 
+function convertPokeApiDetailToStats(statsDetail) {
+    const stats = new Stats()
+    stats.xp = statsDetail.base_experience
+    stats.height = statsDetail.height
+    stats.weight = statsDetail.weight
+    stats.hp = statsDetail.stats[0].base_stat
+    stats.atk = statsDetail.stats[1].base_stat
+    stats.def = statsDetail.stats[2].base_stat
+    stats.spAtk = statsDetail.stats[3].base_stat
+    stats.spDef = statsDetail.stats[4].base_stat
+    stats.speed = statsDetail.stats[5].base_stat
+
+    return stats
+}
+
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)
         .then((response) => response.json())
@@ -32,4 +47,11 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
         .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
+}
+
+pokeApi.getStats = (url) => {
+    return fetch(url)
+        .then((response) => response.json())
+        .then(convertPokeApiDetailToStats)
+        .then((statsDetails) => statsDetails)
 }
